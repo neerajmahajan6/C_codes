@@ -10,7 +10,7 @@ int main()
 	printf("4. French Fries\n");
 	printf("5. Sadwich\n");
 	printf("Enter your choice:- ");
-	scanf("%d",ch);
+	scanf("%d",&ch);
 	switch(ch)
 	{
 		case 1:
