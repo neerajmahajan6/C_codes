@@ -1,0 +1,47 @@
+#include<stdio.h>
+int i,j;
+
+void print_array(int ar[3][3]);
+int s_of_d(int ar[3][3]);
+
+int main()
+{
+	int ar[3][3];
+	int sum;
+	printf("Iput Elemets in the matrix:\n");
+	for(i=0;i<3;++i)
+	    for(j=0;j<3;++j)
+	    {
+	    	printf("element - ");
+	    	printf("[%d],[%d]: ",i,j);
+	    	scanf("%d",&ar[i][j]);
+		}
+    print_array(ar);
+    sum=s_of_d(ar);
+    printf("\nSum of Elements of diagonal = %d",sum);
+	return 0;
+}
+
+void print_array(int ar[3][3])
+{
+	printf("\n\nThe matrix is : \n");
+	for(i=0;i<3;++i)
+    {
+    	for(j=0;j<3;++j)
+	   {
+	   	    printf("%d ",ar[i][j]);
+	   }
+	   printf("\n");
+    }
+}
+
+int s_of_d(int ar[3][3])
+{
+	int s,x=0;
+	for(i=0;i<3;++i)
+    {
+        s=x+ar[i][i];
+		x=s;
+    }
+    return s;
+}
